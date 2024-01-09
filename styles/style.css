@@ -2,16 +2,23 @@
   --dark-purple: #201e4a;
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 * {
   font-family: Montserrat;
 }
 
-html,
 body {
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none;
-  outline: none;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -53,9 +60,10 @@ img {
 
 /* start herosection */
 .heroSection {
-  background: url(/assets/images/hero-bg.png);
+  background: url(/assets/images/hero-bg.png) no-repeat;
   background-size: 100% 100%;
-  min-height: 100vb;
+  /* min-height: 100vh;
+  max-height: 1150.381px; */
   color: #fff;
   padding-top: 50px;
   padding-bottom: 90px;
@@ -86,7 +94,6 @@ img {
 .heroSection .btn {
   margin-top: 72px;
 }
-
 /* end hero section */
 
 /* start running business section */
@@ -104,7 +111,106 @@ img {
   font-weight: 600;
   line-height: normal;
 }
+
+.running_business_section ul {
+  list-style: none;
+  position: relative;
+  max-width: 1133px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+  padding-inline-start: 70px;
+  margin-top: 60px;
+  margin-bottom: 65px;
+}
+
+.running_business_section ul li {
+  color: #000;
+  font-size: 26.682px;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.running_business_section ul li::before {
+  position: absolute;
+  left: 0;
+  content: "";
+  background: url(/assets//icons/list-type-img.svg) no-repeat center;
+  background-size: 45.86px;
+  width: 45.86px;
+  height: 45.86px;
+}
 /* end running business section */
+
+/* start trusted client section */
+.trusted_clients_section {
+  padding-top: 110px;
+  padding-bottom: 154px;
+}
+
+.trusted_clients_section h1 {
+  max-width: 1030.601px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+  text-align: center;
+  font-size: 40.023px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.trusted_clients_section .cards_wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5%;
+  margin-top: 88px;
+}
+
+.trusted_clients_section .cards_wrapper .content {
+  background: #f1f1f1;
+  box-shadow: 0px 3.335px 3.335px 0px rgba(0, 0, 0, 0.25);
+  padding: 47px 18px 72px;
+}
+
+.trusted_clients_section .cards_wrapper .content .quote_icon {
+  width: 50.863px;
+  height: 44.192px;
+  display: block;
+  margin-top: -67px;
+  margin-bottom: 25px;
+}
+
+.trusted_clients_section .cards_wrapper .content p {
+  font-size: 25.015px;
+}
+
+.trusted_clients_section .cards_wrapper .profile img {
+  width: 100.058px;
+  height: 100.058px;
+  border-radius: 50%;
+  margin-top: -50px;
+}
+
+.trusted_clients_section .cards_wrapper .profile p {
+  color: #000;
+  font-size: 25.015px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.trusted_clients_section .btn {
+  margin-top: 93px;
+}
+/* end trusted client section */
+
+/* start footer */
+footer {
+  background-color: var(--dark-purple);
+  color: #ffffff;
+}
+/* end footer */
 
 /* start media query */
 @media (max-width: 1224px) {
@@ -132,6 +238,7 @@ img {
     height: 33px;
   }
   .heroSection {
+    /* max-height: 558.028px; */
     padding-top: 20px;
     padding-bottom: 42px;
   }
@@ -150,6 +257,59 @@ img {
 
   .running_business_section :is(h1, h2) {
     font-size: 20px;
+  }
+  .running_business_section ul {
+    padding-inline-start: 36px;
+    margin-top: 30px;
+    margin-bottom: 32px;
+  }
+
+  .running_business_section ul li {
+    font-size: 16px;
+  }
+
+  .running_business_section ul li::before {
+    background-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .trusted_clients_section {
+    padding-top: 44px;
+    padding-bottom: 50px;
+  }
+  .trusted_clients_section h1 {
+    font-size: 20px;
+  }
+  .trusted_clients_section .cards_wrapper {
+    grid-template-columns: auto;
+    gap: 70px;
+    margin-top: 32px;
+  }
+
+  .trusted_clients_section .cards_wrapper .content {
+    padding: 51px 14px 58px;
+  }
+
+  .trusted_clients_section .cards_wrapper .content .quote_icon {
+    width: 28px;
+    height: 26px;
+    margin-top: -63px;
+  }
+  .trusted_clients_section .cards_wrapper .content p {
+    font-size: 16px;
+  }
+
+  .trusted_clients_section .cards_wrapper .profile img {
+    width: 55px;
+    height: 55px;
+    margin-top: -27.5px;
+  }
+  .trusted_clients_section .cards_wrapper .profile p {
+    font-size: 16px;
+  }
+  .trusted_clients_section .btn {
+    margin-top: 30px;
   }
 }
 /* end media query */
