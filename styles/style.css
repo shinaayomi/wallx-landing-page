@@ -1,0 +1,155 @@
+:root {
+  --dark-purple: #201e4a;
+}
+
+* {
+  font-family: Montserrat;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1488px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  height: 76px;
+}
+
+.btn {
+  background-color: var(--dark-purple);
+  color: #ffff;
+  border-radius: 12.507px;
+  font-size: 30.017px;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+}
+
+.get-started-btn {
+  width: 226.799px;
+  height: 81.714px;
+}
+
+/* start herosection */
+.heroSection {
+  background: url(/assets/images/hero-bg.png);
+  background-size: 100% 100%;
+  min-height: 100vb;
+  color: #fff;
+  padding-top: 50px;
+  padding-bottom: 90px;
+}
+
+.heroSection h1 {
+  max-width: 1110.647px;
+  font-size: 53.364px;
+  line-height: normal;
+  text-align: center;
+  margin-top: 55px;
+  margin-bottom: 46px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroSection h2 {
+  max-width: 1063.953px;
+  font-size: 30.017px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 55px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heroSection .btn {
+  margin-top: 72px;
+}
+
+/* end hero section */
+
+/* start running business section */
+.running_business_section h1 {
+  color: #000;
+  font-size: 45.026px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 21px;
+}
+
+.running_business_section h2 {
+  color: #000;
+  font-size: 33.353px;
+  font-weight: 600;
+  line-height: normal;
+}
+/* end running business section */
+
+/* start media query */
+@media (max-width: 1224px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 29px;
+    height: 28px;
+  }
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .btn {
+    font-size: 13px;
+    border-radius: 15px;
+  }
+  .get-started-btn {
+    width: 100px;
+    height: 33px;
+  }
+  .heroSection {
+    padding-top: 20px;
+    padding-bottom: 42px;
+  }
+  .heroSection h1 {
+    font-size: 22px;
+    margin-bottom: 16px;
+    margin-top: 36px;
+  }
+  .heroSection h2 {
+    font-size: 16px;
+    margin-bottom: 45px;
+  }
+  .heroSection .btn {
+    margin-top: 28px;
+  }
+
+  .running_business_section :is(h1, h2) {
+    font-size: 20px;
+  }
+}
+/* end media query */
