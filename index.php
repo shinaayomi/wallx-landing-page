@@ -1,0 +1,340 @@
+<?php
+session_start();
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect form data
+    $name = $_POST["name"];
+    $phone = $_POST["phone"];
+    $email = $_POST["email"];
+
+    // Set recipient email address
+    $to = "recipient@example.com";
+
+    // Set subject
+    $subject = "New Form Submission";
+
+    // Build the email body
+    $body = "Name: $name\n";
+    $body .= "Phone: $phone\n";
+    $body .= "Email: $email\n";
+
+    // Additional headers
+    $headers = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion();
+
+    // Attempt to send the email
+    if (mail($to, $subject, $body, $headers)) {
+        // Email sent successfully, set success message in session
+        $_SESSION['success_message'] = "Email sent successfully!";
+    } else {
+        // Failed to send email, set error message in session
+        $_SESSION['error_message'] = "Failed to send email. Please try again later.";
+    }
+
+     // Redirect to another page (e.g., a thank you page)
+   header("Location: " . $_SERVER['HTTP_REFERER']);
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WallX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/Logo.svg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- start hero section -->
+    <main class="heroSection">
+      <nav>
+        <div class="container">
+          <a href="">
+            <img src="/assets//icons/Logo.svg" alt="WallX" class="logo" />
+          </a>
+        </div>
+      </nav>
+      <header>
+        <div class="container">
+          <h1>
+            Conduct Your Business More Efficiently With All In One Business
+            Solution
+          </h1>
+          <h2>
+            From seamless payments and invoicing to sales records and targeted
+            SMS/email marketing, we've got you covered
+          </h2>
+          <div class="text-center">
+            <!-- <img src="/assets/images/VSL.png" alt="" width="826px" /> -->
+            <video
+              src="/assets/videos/WALLX _3D_ANIMATION_PROMO.mp4"
+              width="826px"
+              autoplay
+              controls
+            ></video>
+          </div>
+          <div class="text-center">
+            <button class="btn get-started-btn">Get Started</button>
+          </div>
+        </div>
+      </header>
+    </main>
+    <!-- end hero section -->
+
+    <!-- start running bussiness section -->
+    <section class="running_business_section">
+      <div class="container">
+        <h1 class="text-center">
+          Running your business is now a whole lot easier.<br />
+          We have simplified the process, just for you!
+        </h1>
+        <h2 class="text-center">
+          Benefits you enjoy when you register with WallX
+        </h2>
+        <ul>
+          <li>
+            Receive secured payments from your customers faster and with ease.
+          </li>
+          <li>
+            Get instant notifications on your mobile phone when you receive
+            payments and add manager to receive alerts.
+          </li>
+          <li>Get two instant bank accounts set up in your business name.</li>
+          <li>
+            Create and send customized invoices directly to your customers in
+            just one click.
+          </li>
+          <li>
+            In one glance, view and access your sales records (income and
+            expenditure).
+          </li>
+          <li>
+            Send marketing announcements, sales offers, new arrivals, and
+            discounts to your customers in one click.
+          </li>
+        </ul>
+        <div class="text-center">
+          <button class="btn get-started-btn">Get Started</button>
+        </div>
+      </div>
+    </section>
+    <!-- end running business section -->
+
+    <!-- start trusted clients section -->
+    <section class="trusted_clients_section">
+      <div class="container">
+        <h1>
+          Don't just take our word for it; here's what our trusted clients have
+          to say!
+        </h1>
+        <div class="cards_wrapper">
+          <article>
+            <div class="content">
+              <img
+                src="/assets/icons/quote-icon.svg"
+                alt="Quote"
+                class="quote_icon"
+              />
+              <p>
+                Accepting payment couldn’t have been easier. WallX makes it
+                easier and faster for us to accept payment from our customer
+                using the Paycode.
+              </p>
+            </div>
+            <div class="profile text-center">
+              <img src="/assets/images/ebony-image.svg" alt="" />
+              <p>EBONY Life Cinema</p>
+            </div>
+          </article>
+          <article>
+            <div class="content">
+              <img
+                src="/assets/icons/quote-icon.svg"
+                alt="Quote"
+                class="quote_icon"
+              />
+              <p>
+                Kudos to the team at WallX. We now use WallX to generate payment
+                voucher in just a click and send to our clients for easy payment
+              </p>
+            </div>
+            <div class="profile text-center">
+              <img src="/assets/images/Crust-Cream.svg" alt="" />
+              <p>Crust & Cream Restaurant</p>
+            </div>
+          </article>
+          <article>
+            <div class="content">
+              <img
+                src="/assets/icons/quote-icon.svg"
+                alt="Quote"
+                class="quote_icon"
+              />
+              <p>
+                We deal with inventories a lot, so we need to keep a tab on
+                inflows and outflows. WallX made it easy for us to access our
+                sales records at a glance.
+              </p>
+            </div>
+            <div class="profile text-center">
+              <img src="/assets/images/Wine-Nation.svg" alt="" />
+              <p>Wine Nation</p>
+            </div>
+          </article>
+        </div>
+        <div class="text-center">
+          <button class="btn get-started-btn">Get Started</button>
+        </div>
+      </div>
+    </section>
+    <!-- end trusted clients section -->
+
+    <!-- start need more info   -->
+    <section class="more_info_section">
+      <div class="container">
+        <div class="wrapper">
+          <h1>Need More Information?</h1>
+          <p class="sub_title">
+            Kindly fill out the form below, and we’ll reach out to you with all
+            you need to know.
+          </p>
+
+            <?php if (!empty($_SESSION['success_message'] )) : ?>
+        <div style="color: green;"><?php echo $_SESSION['success_message'] ; ?></div>
+    <?php elseif (!empty($_SESSION['error_message'])) : ?>
+        <div style="color: red;"><?php echo $_SESSION['error_message']; ?></div>
+    <?php endif; ?>
+       
+          <form action="" id="user_info" method="post">
+
+            <label for="name">Name</label>
+            <input type="text" name="name" />
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" name="phone" />
+            <label for="email">Email Address</label>
+            <input type="text" name="email" />
+          </form>
+          <div class="text-center">
+            <button
+              class="btn submit_btn"
+              form="user_info"
+            >
+              Submit
+            </button>
+          </div>
+
+          <div class="talk-to-sale">
+            <h1>Talk To Sales</h1>
+            <div class="contact-wrapper">
+              <div class="contact">
+                <img src="/assets//icons/tell-icon.svg" alt="" />
+                <p>+234 814 749 0832</p>
+              </div>
+              <div class="contact">
+                <img src="/assets//icons/mail-icon.svg" alt="" />
+                <p>hello@wallx.co</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end need more info -->
+
+    <!-- start footer -->
+    <footer>
+      <div class="container">
+        <h1>Share, Spend With Ease</h1>
+        <div class="links_wrapper">
+          <div>
+            <p class="link_title">Pages</p>
+            <ul>
+              <li>
+                <a href="">Pricing</a>
+              </li>
+              <li>
+                <a href="">Services</a>
+              </li>
+              <li>
+                <a href="">Customers</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="link_title">Company</p>
+            <ul>
+              <li>
+                <a href="">Team</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">FAQ</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="link_title">Contact</p>
+            <ul>
+              <li>
+                <a href="">hello@wallx.co</a>
+              </li>
+              <li>
+                <a href="">+234(70) 6328-3502</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="link_title">Follow Us</p>
+            <div class="social_media">
+              <a href="">
+                <img src="/assets/icons/instagram-icon.svg" alt="Instagram" />
+              </a>
+              <a href=""
+                ><img src="/assets/icons/facebook-icon.svg" alt="Facebook" />
+              </a>
+              <a href="">
+                <img src="/assets/icons/linkedin-icon.svg" alt="Linkedin" />
+              </a>
+              <a href="">
+                <img src="/assets/icons/twitter-icon.svg" alt="X" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="border-color: #fff; margin: 0" />
+      <div class="container">
+        <div class="copyright_wrapper">
+          <a href="">
+            <img
+              src="/assets//icons/Logo.svg"
+              alt="WallX"
+              class="footer_logo"
+            />
+          </a>
+          <p class="address">
+            21 Nyese Ibrahim Tella Street, Oral Estate, Eleganza Bus Stop, Lekki
+            Expressway, Lagos
+          </p>
+          <p>All right reserved. c 2023</p>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="/js/index.js"></script>
+  </body>
+</html>
