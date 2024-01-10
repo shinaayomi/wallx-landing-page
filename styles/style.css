@@ -52,6 +52,7 @@ img {
   font-weight: 600;
   line-height: normal;
   border: none;
+  cursor: pointer;
 }
 
 .get-started-btn {
@@ -264,9 +265,14 @@ img {
   width: 202.618px;
   height: 69.207px;
 }
+.more_info_section .talk-to-sale {
+  padding-top: 125px;
+  padding-bottom: 154px;
+}
 
 .more_info_section .talk-to-sale .contact-wrapper {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 145px;
 }
@@ -275,11 +281,6 @@ img {
   display: flex;
   align-items: center;
   gap: 20px;
-}
-
-.more_info_section .talk-to-sale {
-  padding-top: 125px;
-  padding-bottom: 154px;
 }
 
 .more_info_section .talk-to-sale .contact-wrapper .contact p {
