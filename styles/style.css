@@ -54,6 +54,7 @@ video {
   line-height: normal;
   border: none;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .get-started-btn {
@@ -392,6 +393,7 @@ footer .copyright_wrapper p {
   .get-started-btn {
     width: 100px;
     height: 33px;
+    border-radius: 15px;
   }
   .heroSection {
     /* max-height: 558.028px; */
@@ -441,6 +443,7 @@ footer .copyright_wrapper p {
     margin-top: 32px;
   }
   .trusted_clients_section .cards_wrapper .content {
+    min-height: auto;
     padding: 51px 14px 58px;
   }
   .trusted_clients_section .cards_wrapper .content .quote_icon {
@@ -471,6 +474,8 @@ footer .copyright_wrapper p {
   }
   .more_info_section form {
     padding: 26.74px 17.94px;
+    margin-top: 16px;
+    margin-bottom: 13px;
   }
   .more_info_section form label {
     font-size: 12px;
@@ -484,6 +489,7 @@ footer .copyright_wrapper p {
   .more_info_section .submit_btn {
     width: 100px;
     height: 33px;
+    border-radius: 15px;
   }
   .more_info_section .talk-to-sale {
     padding-top: 43px;
