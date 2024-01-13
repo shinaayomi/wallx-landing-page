@@ -47,14 +47,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="shortcut icon"
-      href="/assets/icons/Logo.svg"
+      href="assets/icons/Logo.svg"
       type="image/x-icon"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
     <!-- start hero section -->
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <nav>
         <div class="container">
           <a href="">
-            <img src="/assets//icons/Logo.svg" alt="WallX" class="logo" />
+            <img src="assets/icons/Logo.svg" alt="WallX" class="logo" />
           </a>
         </div>
       </nav>
@@ -77,31 +77,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             SMS/email marketing, we've got you covered
           </h2>
           <div class="text-center">
-            <!-- <img src="/assets/images/VSL.png" alt="" width="826px" /> -->
-            <video
-              src="/assets/videos/WALLX _3D_ANIMATION_PROMO.mp4"
-              width="826px"
-              autoplay
-              controls
-            ></video>
+            <!-- <img src="assets/images/VSL.png" alt="" width="826px" /> -->
+            <iframe
+              width="826"
+              style="max-width: 100%; aspect-ratio: 2/1.2"
+              src="https://www.youtube.com/embed/fN-AL6tIT8o"
+              title="How To Register And Start Using WallX Business Suite"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
           <div class="text-center">
-            <button class="btn get-started-btn">Get Started</button>
+            <a href="https://business.wallx.co/register">
+              <button class="btn get-started-btn">Get Started</button>
+            </a>
           </div>
         </div>
       </header>
     </main>
     <!-- end hero section -->
 
-    <!-- start running bussiness section -->
-    <section class="running_business_section">
+   <!-- start running bussiness section -->
+   <section class="running_business_section">
       <div class="container">
         <h1 class="text-center">
           Running your business is now a whole lot easier.<br />
           We have simplified the process, just for you!
         </h1>
         <h2 class="text-center">
-          Benefits you enjoy when you register with WallX
+          Enjoy the following benefits when you register on WallX Business Suite
         </h2>
         <ul>
           <li>
@@ -109,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </li>
           <li>
             Get instant notifications on your mobile phone when you receive
-            payments and add manager to receive alerts.
+            payments and add managers to receive alerts.
           </li>
           <li>Get two instant bank accounts set up in your business name.</li>
           <li>
@@ -117,8 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             just one click.
           </li>
           <li>
-            In one glance, view and access your sales records (income and
-            expenditure).
+            In one glance, view and access your sales records (Income and Expenditure Reports).
           </li>
           <li>
             Send marketing announcements, sales offers, new arrivals, and
@@ -126,7 +130,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </li>
         </ul>
         <div class="text-center">
+          <a href="https://business.wallx.co/register">
           <button class="btn get-started-btn">Get Started</button>
+          </a>
         </div>
       </div>
     </section>
@@ -143,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <article>
             <div class="content">
               <img
-                src="/assets/icons/quote-icon.svg"
+                src="assets/icons/quote-icon.svg"
                 alt="Quote"
                 class="quote_icon"
               />
@@ -154,14 +160,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </p>
             </div>
             <div class="profile text-center">
-              <img src="/assets/images/ebony-image.svg" alt="" />
+              <img src="assets/images/ebony-image.svg" alt="" />
               <p>EBONY Life Cinema</p>
             </div>
           </article>
           <article>
             <div class="content">
               <img
-                src="/assets/icons/quote-icon.svg"
+                src="assets/icons/quote-icon.svg"
                 alt="Quote"
                 class="quote_icon"
               />
@@ -171,14 +177,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </p>
             </div>
             <div class="profile text-center">
-              <img src="/assets/images/Crust-Cream.svg" alt="" />
+              <img src="assets/images/Crust-Cream.svg" alt="" />
               <p>Crust & Cream Restaurant</p>
             </div>
           </article>
           <article>
             <div class="content">
               <img
-                src="/assets/icons/quote-icon.svg"
+                src="assets/icons/quote-icon.svg"
                 alt="Quote"
                 class="quote_icon"
               />
@@ -189,13 +195,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </p>
             </div>
             <div class="profile text-center">
-              <img src="/assets/images/Wine-Nation.svg" alt="" />
+              <img src="assets/images/Wine-Nation.svg" alt="" />
               <p>Wine Nation</p>
             </div>
           </article>
         </div>
         <div class="text-center">
+          <a href="https://business.wallx.co/register">
           <button class="btn get-started-btn">Get Started</button>
+          </a>
         </div>
       </div>
     </section>
@@ -212,9 +220,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           </p>
 
             <?php if (!empty($_SESSION['success_message'] )) : ?>
-        <div style="color: green;"><?php echo $_SESSION['success_message'] ; ?></div>
+        <div style="color: green;text-align: center;"><?php echo $_SESSION['success_message'] ; ?></div>
     <?php elseif (!empty($_SESSION['error_message'])) : ?>
-        <div style="color: red;"><?php echo $_SESSION['error_message']; ?></div>
+        <div style="color: red;text-align: center;"><?php echo $_SESSION['error_message']; ?></div>
     <?php endif; ?>
        
           <form action="" id="user_info" method="post">
@@ -222,9 +230,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="name">Name</label>
             <input type="text" name="name" />
             <label for="phoneNumber">Phone Number</label>
-            <input type="text" name="phone" />
+            <input type="tel" name="phone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"/>
             <label for="email">Email Address</label>
-            <input type="text" name="email" />
+            <input type="email" name="email" />
           </form>
           <div class="text-center">
             <button
@@ -239,11 +247,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>Talk To Sales</h1>
             <div class="contact-wrapper">
               <div class="contact">
-                <img src="/assets//icons/tell-icon.svg" alt="" />
+                <img src="assets/icons/tell-icon.svg" alt="" />
                 <p>+234 814 749 0832</p>
               </div>
               <div class="contact">
-                <img src="/assets//icons/mail-icon.svg" alt="" />
+                <img src="assets/icons/mail-icon.svg" alt="" />
                 <p>hello@wallx.co</p>
               </div>
             </div>
@@ -262,13 +270,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p class="link_title">Pages</p>
             <ul>
               <li>
-                <a href="">Pricing</a>
+                <a href="https://wallx.co/pricing">Pricing</a>
               </li>
               <li>
-                <a href="">Services</a>
+                <a href="https://wallx.co/service/pos">Services</a>
               </li>
               <li>
-                <a href="">Customers</a>
+                <a href="https://wallx.co/customer">Customers</a>
               </li>
             </ul>
           </div>
@@ -276,13 +284,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p class="link_title">Company</p>
             <ul>
               <li>
-                <a href="">Team</a>
+                <a href="https://wallx.co/team">Team</a>
               </li>
               <li>
-                <a href="">About</a>
+                <a href="https://wallx.co/about">About</a>
               </li>
               <li>
-                <a href="">FAQ</a>
+                <a href="https://wallx.co/faq">FAQ</a>
               </li>
             </ul>
           </div>
@@ -290,27 +298,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p class="link_title">Contact</p>
             <ul>
               <li>
-                <a href="">hello@wallx.co</a>
+                <a>hello@wallx.co</a>
               </li>
               <li>
-                <a href="">+234(70) 6328-3502</a>
+                <a>+234(70) 6328-3502</a>
               </li>
             </ul>
           </div>
           <div>
             <p class="link_title">Follow Us</p>
             <div class="social_media">
-              <a href="">
-                <img src="/assets/icons/instagram-icon.svg" alt="Instagram" />
+              <a href="https://www.instagram.com/wallx.africa?igshid=YmMyMTA2M2Y%3D">
+                <img src="assets/icons/instagram-icon.svg" alt="Instagram" />
               </a>
-              <a href=""
-                ><img src="/assets/icons/facebook-icon.svg" alt="Facebook" />
+              <a href="https://www.facebook.com/wallx.africa" target="_blank"
+                ><img src="assets/icons/facebook-icon.svg" alt="Facebook" />
               </a>
-              <a href="">
-                <img src="/assets/icons/linkedin-icon.svg" alt="Linkedin" />
+              <a href="https://www.linkedin.com/company/wallx/" target="_blank">
+                <img src="assets/icons/linkedin-icon.svg" alt="Linkedin" />
               </a>
-              <a href="">
-                <img src="/assets/icons/twitter-icon.svg" alt="X" />
+              <a href="https://twitter.com/wallx_africa?s=11&t=4Z11r4vBfwR9OfTnbUdPEw" target="_blank">
+                <img src="assets/icons/twitter-icon.svg" alt="X" />
               </a>
             </div>
           </div>
@@ -321,7 +329,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="copyright_wrapper">
           <a href="">
             <img
-              src="/assets//icons/Logo.svg"
+              src="assets//icons/Logo.svg"
               alt="WallX"
               class="footer_logo"
             />
